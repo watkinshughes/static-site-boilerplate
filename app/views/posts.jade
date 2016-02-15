@@ -1,0 +1,15 @@
+extends common/layout
+    
+block title
+  | Blog Posts
+
+// Template styles
+block styles    
+  //- Add custom template styles within this block
+  
+block content
+  for post in posts
+    .post
+      h2 #{post.title}
+      .post--body
+        | !{post.body}

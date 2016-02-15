@@ -5,8 +5,10 @@ module.exports = {
     'users',
     'albums'
   ],
-  'output': './data',
   'jade': {
     pretty: true
-  }
+  },
+  'views': './app/views/',
+  'data': './app/data/',
+  'build': './www/'
 }

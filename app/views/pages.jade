@@ -1,0 +1,20 @@
+extends common/layout
+    
+block title
+  | Blog Posts
+
+// Template styles
+block styles    
+  //- Add custom template styles within this block
+  
+block content
+  //- for page in pages
+  //-   .page
+  //-     h2 #{page.title}
+  //-     .page--body
+  //-       | !{page.body}
+  
+  :markdown-it
+    # Markdown
+
+    I often like including markdown documents.

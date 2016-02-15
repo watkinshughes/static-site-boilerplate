@@ -10,7 +10,7 @@ module.exports = function(callback) {
   function saveData() {
     count++
     if (count === length) {
-      const file = './data/locals.json';
+      const file = config.data + 'locals.json';
       const data = JSON.stringify(locals, null, ' ');
       fs.writeFile(file, data, (error) => {
         if (error) throw error;
