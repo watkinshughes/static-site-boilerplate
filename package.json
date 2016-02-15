@@ -13,6 +13,7 @@
   "devDependencies": {
     "fetch-static-data": "^1.1.0",
     "jade": "^1.11.0",
+    "jstransformer-markdown": "^1.1.0",
     "markdown": "^0.5.0"
   }
 }

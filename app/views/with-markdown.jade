@@ -8,8 +8,7 @@ block styles
   //- Add custom template styles within this block
   
 block content
-  for page in pages
-    .page
-      h2 #{page.title}
-      .page--body
-        | !{page.body}
+  :markdown
+    # Markdown
+
+    I often like including markdown documents.
