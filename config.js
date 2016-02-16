@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = {
   'api': 'http://jsonplaceholder.typicode.com/',
   'endpoints': [
@@ -8,7 +10,10 @@ module.exports = {
   'jade': {
     pretty: true
   },
-  'views': './app/views/',
-  'data': './app/data/',
-  'build': './www/'
+  'views': './views/',
+  'data': './data/',
+  'build': './public/',
+  locals () {
+    return JSON.parse(fs.readFileSync('./data/locals.json'))
+  }
 }

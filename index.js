@@ -1,4 +1,5 @@
 'use strict'
-const fetchData = require('./tasks/fetch-data.js')
-const compileSite = require('./tasks/compile-site.js')
-fetchData(compileSite)
+const fetchData = require('./lib/tasks/fetch-data.js')
+const buildSite = require('./lib/tasks/build-site.js')
+
+fetchData(buildSite)
