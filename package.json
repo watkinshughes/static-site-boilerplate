@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon -e jade,scss,js index.js",
+    "comb": "csscomb .",
     "lint": "standard --verbose | snazzy",
-    "start": "node index.js"
+    "deploy": "ENV=dev node index.js",
+    "deploy:staging": "ENV=staging node index.js",
+    "deploy:production": "ENV=production node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +18,12 @@
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
+    "csscomb": "^3.1.8",
     "fetch-static-data": "^1.1.0",
     "jade": "^1.11.0",
     "jstransformer-markdown": "^1.1.0",
+    "nodemon": "^1.8.1",
+    "simple-autoreload-server": "0.0.21",
     "snazzy": "^3.0.0",
     "standard": "^6.0.5"
   }
