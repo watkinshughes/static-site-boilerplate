@@ -1,8 +1,8 @@
 'use strict'
 const pages = require('./pages.js')
-const posts = require('./posts.js')
+const endpoints = require('./endpoints.js')
 
 let builds = []
-builds.push(pages, posts)
+builds.push(pages, endpoints)
 
 module.exports = builds

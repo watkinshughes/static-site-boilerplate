@@ -7,5 +7,5 @@ block content
   ul
     for post in locals.posts
       li
-        - var link = 'posts/' + post.title.toLowerCase().replace(/\s+/g, '-') + '.html'
+        - var link = '/posts/' + post.title.toLowerCase().replace(/\s+/g, '-')
         a(href="#{link}") #{post.title}

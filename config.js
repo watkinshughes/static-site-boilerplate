@@ -4,11 +4,12 @@ module.exports = {
   'api': 'http://jsonplaceholder.typicode.com/',
   'endpoints': [
     'posts',
-    'albums',
-    'users'
+    'albums'
   ],
   'pages': [
-    'posts'
+    'index',
+    'posts',
+    'albums'
   ],
   'views': './app/views/',
   'data': './data/',

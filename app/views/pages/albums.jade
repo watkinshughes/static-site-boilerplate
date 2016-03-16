@@ -1,0 +1,11 @@
+extends ../common/master
+
+block title
+  title Albums
+
+block content
+  ul
+    for album in locals.albums
+      li
+        - var link = '/albums/' + album.title.toLowerCase().replace(/\s+/g, '-')
+        a(href="#{link}") #{album.title}
