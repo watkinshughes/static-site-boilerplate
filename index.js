@@ -6,7 +6,7 @@ const develop = require('./lib/tasks/develop.js')
 const env = process.env.ENV
 
 const build = new Promise((resolve, reject) => {
-  // Add error handling
+  // @todo - Add error handling
   fetchData(() => {
     buildSite()
     resolve()

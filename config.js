@@ -4,15 +4,18 @@ module.exports = {
   'api': 'http://jsonplaceholder.typicode.com/',
   'endpoints': [
     'posts',
-    'users',
-    'albums'
+    'albums',
+    'users'
   ],
+  'pages': [
+    'posts'
+  ],
+  'views': './app/views/',
+  'data': './data/',
+  'build': './www/',
   'jade': {
     pretty: true
   },
-  'views': './views/',
-  'data': './data/',
-  'build': './public/',
   locals () {
     return JSON.parse(fs.readFileSync('./data/locals.json'))
   }

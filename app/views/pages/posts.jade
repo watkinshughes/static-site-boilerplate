@@ -1,0 +1,15 @@
+extends ../common/master
+
+block title
+  title Posts
+
+// Template styles
+block styles
+  //- Add custom template styles within this block
+
+block content
+  ul
+    for post in locals.posts
+      li
+        - var link = 'posts/' + post.title.toLowerCase().replace(/\s+/g, '-') + '.html'
+        a(href="#{link}") #{post.title}
