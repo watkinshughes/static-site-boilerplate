@@ -1,30 +1,36 @@
 {
   "name": "static",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Node-based static site generator/boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e jade,scss,js index.js",
     "comb": "csscomb .",
-    "lint": "standard --verbose | snazzy",
-    "deploy": "ENV=dev node index.js",
-    "deploy:staging": "ENV=staging node index.js",
-    "deploy:production": "ENV=production node index.js"
+    "lint:js": "eslint .",
+    "test": "npm run comb & npm run lint:js",
+    "build": "nodemon index.js",
+    "develop": "node ./lib/tasks/develop.js",
+    "start": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
-  "standard": {
-    "parser": "babel-eslint"
+  "license": "MIT",
+  "browser": {},
+  "browserify-shim": {},
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "devDependencies": {
-    "babel-eslint": "^4.1.8",
+    "babel-eslint": "^6.0.0-beta.6",
+    "browser-sync": "^2.11.2",
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "csscomb": "^3.1.8",
-    "fetch-static-data": "^1.1.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "imagemin": "^4.0.0",
     "jade": "^1.11.0",
-    "jstransformer-markdown": "^1.1.0",
+    "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
-    "simple-autoreload-server": "0.0.21",
-    "snazzy": "^3.0.0",
-    "standard": "^6.0.5"
+    "watchify": "^3.7.0"
   }
 }

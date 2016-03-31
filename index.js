@@ -1,20 +1,11 @@
-'use strict'
-const fetchData = require('./lib/tasks/fetch-data.js')
-const buildApp = require('./lib/tasks/build-app.js')
-const deploy = require('./lib/tasks/deploy.js')
-const develop = require('./lib/tasks/develop.js')
-const env = process.env.ENV
+'use strict';
+const fetchData = require('./lib/tasks/fetch-data.js');
+const buildSrc = require('./lib/tasks/build-src.js');
 
-
-const build = new Promise((resolve, reject) => {
-  fetchData(() => {
-    buildApp()
-    resolve()
-  })
-})
-
-if (env) {
-  build.then(deploy)
-} else {
-  build.then(develop)
+function build() {
+  buildSrc(()=> {
+    console.log('Building source. Start dev server with `npm run develop` in a separate terminal.');
+  });
 }
+
+fetchData(build);

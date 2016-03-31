@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "ignore": [
+    "www/**",
+    "data/**"
+  ],
+  "ext": "jade, scss, js"
+}

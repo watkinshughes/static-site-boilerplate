@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb/base",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {},
+  "rules": {
+    "no-console": [0],
+    "comma-dangle": [2, "never"],
+    "arrow-spacing": [2, { "before": false, "after": true }]
+  }
+}
