@@ -9,7 +9,7 @@
     "test": "npm run comb & npm run lint:js",
     "build": "nodemon index.js",
     "develop": "node ./lib/tasks/develop.js",
-    "start": "npm run build"
+    "start": "npm run build & npm run develop"
   },
   "license": "MIT",
   "browser": {},

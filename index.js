@@ -4,7 +4,7 @@ const buildSrc = require('./lib/tasks/build-src.js');
 
 function build() {
   buildSrc(()=> {
-    console.log('Building source. Start dev server with `npm run develop` in a separate terminal.');
+    console.log('Building source...starting dev server.');
   });
 }
 
