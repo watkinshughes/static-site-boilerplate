@@ -9,5 +9,3 @@ Jade for templates. SASS, Browserify & imagemin for the frontend.
 `npm install`
 
 `npm start`
-
-then `npm run develop` in a separate terminal.
