@@ -6,7 +6,8 @@
   "scripts": {
     "comb": "csscomb .",
     "lint:js": "eslint .",
-    "test": "npm run comb & npm run lint:js",
+    "lint": "npm run comb & npm run lint:js",
+    "test": "karma start",
     "build": "nodemon index.js",
     "develop": "node ./lib/tasks/develop.js",
     "start": "npm run build & npm run develop"
