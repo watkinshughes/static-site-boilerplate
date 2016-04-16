@@ -1,6 +1,6 @@
 'use strict';
-const fetchData = require('./lib/tasks/fetch-data.js');
-const buildSrc = require('./lib/tasks/build-src.js');
+const fetchData = require('./lib/tasks/fetchData.js');
+const buildSrc = require('./lib/tasks/buildSrc.js');
 
 function build() {
   buildSrc(()=> {
