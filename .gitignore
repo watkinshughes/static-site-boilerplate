@@ -1,2 +1,13 @@
 node_modules
+www/assets/scripts/*
+www/assets/styles/*
+www/assets/fonts/*
+www/assets/images/*
+www/*.html
+www/**/*.html
+!www/assets/scripts/README.md
+!www/assets/styles/README.md
+!www/assets/fonts/README.md
+*.orig
 *.log
+.DS_Store
