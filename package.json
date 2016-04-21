@@ -4,6 +4,7 @@
   "description": "Node-based static site generator/boilerplate",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "lint:js": "eslint .",
     "lint:css": "sass-lint -c .sass-lint.yml -v",
     "lint": "npm run lint:css & npm run lint:js",
@@ -11,9 +12,10 @@
     "fix:js": "npm run lint:js -- --fix",
     "fix": "npm run fix:js & npm run fix:css",
     "test": "npm run lint && karma start",
-    "build": "nodemon index.js",
+    "build": "node index.js",
+    "watch": "nodemon index.js",
     "develop": "node ./lib/tasks/develop.js",
-    "start": "npm run build & npm run develop"
+    "start": "npm run watch & npm run develop"
   },
   "license": "MIT",
   "browser": {},

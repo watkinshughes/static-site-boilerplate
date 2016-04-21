@@ -6,6 +6,6 @@ Fetches data via [fetch-static-data](https://github.com/watkinshughes/fetch-stat
 
 Jade for templates. SASS, Browserify & imagemin for the frontend.
 
-`npm install`
+`npm install` (which runs `npm run build`)
 
 `npm start`
