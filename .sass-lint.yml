@@ -1,0 +1,36 @@
+files:
+  include: 'src/assets/styles/**/*.scss'
+
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+
+  quotes:
+    - 2
+    -
+      style: 'double'
+
+  leading-zero:
+    - 1
+    - include: true
+
+  force-pseudo-nesting:
+    - 0
+
+  force-attribute-nesting:
+    - 0
+
+  force-element-nesting:
+    - 0
+
+  placeholder-in-extend:
+    - 0
+
+  no-url-protocols:
+    - 0
+
+  # we automate sort-order with csscomb
+  property-sort-order:
+    - 0

@@ -4,9 +4,12 @@
   "description": "Node-based static site generator/boilerplate",
   "main": "index.js",
   "scripts": {
-    "comb": "csscomb .",
     "lint:js": "eslint .",
-    "lint": "npm run comb & npm run lint:js",
+    "lint:css": "sass-lint -c .sass-lint.yml -v",
+    "lint": "npm run lint:css & npm run lint:js",
+    "fix:css": "csscomb .",
+    "fix:js": "npm run lint:js -- --fix",
+    "fix": "npm run fix:js & npm run fix:css",
     "test": "npm run lint && karma start",
     "build": "nodemon index.js",
     "develop": "node ./lib/tasks/develop.js",
@@ -18,11 +21,14 @@
   "browserify": {
     "transform": [
       "browserify-shim",
-      [ "babelify", {
-        "presets": [
-          "es2015"
-        ]
-      }]
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
     ]
   },
   "devDependencies": {
@@ -45,6 +51,7 @@
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "phantomjs-prebuilt": "^2.1.7",
+    "sass-lint": "^1.6.0",
     "watchify": "^3.7.0"
   }
 }
